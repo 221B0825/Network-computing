@@ -1,3 +1,4 @@
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
@@ -22,6 +23,7 @@ public class CalculatePanel extends JPanel {
 		this.setLayout(layoutManger);
 
 		// components
+		//Font basic = new Font("Segoe", Font.BOLD, 15);
 		JLabel lbCode = new JLabel("code: ");
 		this.add(lbCode);
 		this.tfCode = new JTextField();
@@ -38,6 +40,7 @@ public class CalculatePanel extends JPanel {
 		ActionHandler actionHandler = new ActionHandler();
 		this.calculateButton.addActionListener(actionHandler);
 		this.add(calculateButton);
+		
 		this.result = new JLabel("result: ");
 		this.add(result);
 	}

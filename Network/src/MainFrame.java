@@ -8,6 +8,7 @@ public class MainFrame extends JFrame {
 
 	public MainFrame() {
 		// attribute
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setSize(500, 250);
 		this.setTitle("Network Computing");
 		LayoutManager layoutManager = new BorderLayout();
@@ -19,6 +20,8 @@ public class MainFrame extends JFrame {
 		
 		MainPanel mainPanel = new MainPanel();
 		this.add(mainPanel, BorderLayout.CENTER);
+		
+		
 		
 	}
 
