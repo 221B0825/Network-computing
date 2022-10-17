@@ -10,7 +10,13 @@ public class Calculator {
 		}
 		int[] data = stringToIntData(inputData, code.length);
 		int[] checksum = getChecksum(code, data);
-		return Arrays.toString(checksum);
+		
+		String checksumToString = "";
+		for(int j = 0; j<checksum.length; j++) {
+			checksumToString = checksumToString +" "+checksum[j];
+		}
+		
+		return checksumToString;
 	}
 
 	public void compute() {

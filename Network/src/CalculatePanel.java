@@ -53,7 +53,12 @@ public class CalculatePanel extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			calculate();
+			if(!tfCode.getText().isBlank() && !tfData.getText().isBlank()) {
+				calculate();	
+			}else {
+				System.out.println("is Empty");
+			}
+			
 		}
 
 	}
