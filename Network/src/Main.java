@@ -2,8 +2,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Calculator calculator = new Calculator();
-		calculator.compute();
+		MainFrame mainFrame = new MainFrame();
+		mainFrame.setVisible(true);
+		
+//		Calculator calculator = new Calculator();
+//		calculator.compute();
 	}
 
 }
