@@ -8,7 +8,8 @@ public class MainFrame extends JFrame {
 
 	public MainFrame() {
 		// attribute
-		this.setSize(500, 200);
+		this.setSize(500, 250);
+		this.setTitle("Network Computing");
 		LayoutManager layoutManager = new BorderLayout();
 		this.setLayout(layoutManager);
 

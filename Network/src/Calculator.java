@@ -3,6 +3,16 @@ import java.util.Scanner;
 
 public class Calculator {
 
+	public String compute(String inputCode, String inputData) {
+		int[] code = new int[inputCode.length()];
+		for (int i = 0; i < inputCode.length(); i++) {
+			code[i] = inputCode.charAt(i) - '0';
+		}
+		int[] data = stringToIntData(inputData, code.length);
+		int[] checksum = getChecksum(code, data);
+		return Arrays.toString(checksum);
+	}
+
 	public void compute() {
 		Scanner scanner = new Scanner(System.in);
 
@@ -62,13 +72,21 @@ public class Calculator {
 		return checksum;
 	}
 
+//	private int[] stringToIntData(String input, int codeLength) {
+//		int[] data = new int[input.length() + codeLength - 1];
+//		for (int i = 0; i < input.length(); i++) {
+//			data[i] = input.charAt(i) - '0';
+//		}
+//		for (int j = input.length(); j < data.length; j++) {
+//			data[j] = 0;
+//		}
+//		return data;
+//	}
+
 	private int[] stringToIntData(String input, int codeLength) {
-		int[] data = new int[input.length() + codeLength - 1];
+		int[] data = new int[input.length()];
 		for (int i = 0; i < input.length(); i++) {
 			data[i] = input.charAt(i) - '0';
-		}
-		for (int j = input.length(); j < data.length; j++) {
-			data[j] = 0;
 		}
 		return data;
 	}
