@@ -78,22 +78,23 @@ public class Calculator {
 		return checksum;
 	}
 
-//	private int[] stringToIntData(String input, int codeLength) {
-//		int[] data = new int[input.length() + codeLength - 1];
-//		for (int i = 0; i < input.length(); i++) {
-//			data[i] = input.charAt(i) - '0';
-//		}
-//		for (int j = input.length(); j < data.length; j++) {
-//			data[j] = 0;
-//		}
-//		return data;
-//	}
-
+	// add '0' automatically
 	private int[] stringToIntData(String input, int codeLength) {
-		int[] data = new int[input.length()];
+		int[] data = new int[input.length() + codeLength - 1];
 		for (int i = 0; i < input.length(); i++) {
 			data[i] = input.charAt(i) - '0';
 		}
+		for (int j = input.length(); j < data.length; j++) {
+			data[j] = 0;
+		}
 		return data;
 	}
+
+//	private int[] stringToIntData(String input, int codeLength) {
+//		int[] data = new int[input.length()];
+//		for (int i = 0; i < input.length(); i++) {
+//			data[i] = input.charAt(i) - '0';
+//		}
+//		return data;
+//	}
 }
